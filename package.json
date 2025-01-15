@@ -1,7 +1,10 @@
 {
-  "name": "hono-oidc-middleware",
+  "name": "@moreillon/hono-oidc-middleware",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
   "scripts": {
-    "dev": "bun run --hot src/index.ts"
+    "build": "tsc",
+    "dev": "nodemon src/server.ts"
   },
   "dependencies": {
     "hono": "^4.6.14",
@@ -9,6 +12,9 @@
     "jwks-rsa": "^3.1.0"
   },
   "devDependencies": {
-    "@types/bun": "latest"
+    "@hono/node-server": "^1.15.0",
+    "nodemon": "^3.1.10",
+    "ts-node": "^10.9.2",
+    "typescript": "^5.8.3"
   }
 }
